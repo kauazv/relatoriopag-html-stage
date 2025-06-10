@@ -1,9 +1,14 @@
 import os
 from collections import Counter
+from utils import normalizar_lote
 
 def analisar_lotes(lotes_pdf_lista, lotes_html_lista, pasta_base):
     # Conta ocorrências de cada lote
     contador_pdf = Counter(lotes_pdf_lista)
+    # Aplica normalização nos lotes
+    lotes_pdf_lista = [normalizar_lote(l) for l in lotes_pdf_lista]
+    lotes_html_lista = [normalizar_lote(l) for l in lotes_html_lista]
+
     
     # Lotes únicos
     lotes_unicos_pdf = set(lotes_pdf_lista)
@@ -41,7 +46,7 @@ def analisar_lotes(lotes_pdf_lista, lotes_html_lista, pasta_base):
             f.write("Nenhum lote encontrado no PDF.\n\n")
         
         # Adiciona separador
-        f.write("-" * 48 + "\n")
+        f.write("-" * 30 + "\n")
         
         # Lista todos os lotes dos HTMLs
         f.write("📋 LOTES ENCONTRADOS NO HTML:\n")
