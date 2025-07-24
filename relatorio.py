@@ -29,15 +29,15 @@ def analisar_lotes(lotes_pdf_lista, lotes_html_lista, pasta_base):
         f.write("=" * 70 + "\n\n")
         
         # Informações gerais
-        f.write("📈 INFORMAÇÕES GERAIS:\n")
+        f.write("INFORMAÇÕES GERAIS:\n")
         f.write("-" * 30 + "\n")
-        f.write(f"📄 Total de lotes no PDF (incluindo duplicatas): {len(lotes_pdf_lista)}\n")
-        f.write(f"📄 Total de lotes únicos no PDF: {len(lotes_unicos_pdf)}\n")
-        f.write(f"🌐 Total de lotes únicos nos HTMLs: {len(lotes_unicos_html)}\n")
-        f.write(f"🌐 Total de arquivos HTML processados: {len(lotes_html_lista)}\n\n")
+        f.write(f"Total de lotes no PDF (incluindo duplicatas): {len(lotes_pdf_lista)}\n")
+        f.write(f"Total de lotes únicos no PDF: {len(lotes_unicos_pdf)}\n")
+        f.write(f"Total de lotes únicos nos HTMLs: {len(lotes_unicos_html)}\n")
+        f.write(f"Total de arquivos HTML processados: {len(lotes_html_lista)}\n\n")
         
         # Lista todos os lotes do PDF
-        f.write("📋 LOTES ENCONTRADOS NO PDF:\n")
+        f.write("LOTES ENCONTRADOS NO PDF:\n")
         f.write("-" * 30 + "\n")
         if lotes_pdf_lista:
             lotes_pdf_ordenados = sorted(lotes_pdf_lista)
@@ -49,7 +49,7 @@ def analisar_lotes(lotes_pdf_lista, lotes_html_lista, pasta_base):
         f.write("-" * 30 + "\n")
         
         # Lista todos os lotes dos HTMLs
-        f.write("📋 LOTES ENCONTRADOS NO HTML:\n")
+        f.write("LOTES ENCONTRADOS NO HTML:\n")
         f.write("-" * 30 + "\n")
         if lotes_html_lista:
             lotes_html_ordenados = sorted(lotes_html_lista)
